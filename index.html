@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#16090d" />
+  <title>Aurelia & Sebastian — An Invitation</title>
+  <meta name="description" content="A celebration of love. You are warmly invited." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <audio id="weddingMusic" loop preload="none">
+    <!-- Add your legally obtained Feeling Good - Michael Bublé audio file here -->
+    <source src="assets/feeling-good.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Toggle music" title="Toggle music">
+    <span class="music-bars"><i></i><i></i><i></i><i></i></span>
+    <span id="musicLabel">Music off</span>
+  </button>
+
+  <section class="intro" id="intro">
+    <div class="intro-glow"></div>
+    <div class="intro-topline">AN INVITATION IS HIDING UNDER THE GLITTER</div>
+    <div class="intro-monogram">A <span>&</span> S</div>
+    <div class="glitter-field" id="glitterField" aria-label="Tap to reveal invitation">
+      <div class="glitter-word">A celebration<br>of love</div>
+      <div class="glitter-hint">✦ &nbsp; Blow on the glitter<br>or simply tap &nbsp; ✦</div>
+      <button class="reveal-button" id="revealButton">Tap to enter <span>↗</span></button>
+    </div>
+    <div class="intro-bottom">WITH LOVE, AURELIA & SEBASTIAN</div>
+  </section>
+
+  <main id="invitation" class="hidden">
+    <section class="hero section-pad">
+      <div class="hero-image"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">TOGETHER WITH THEIR FAMILIES</p>
+        <h1><span>Aurelia</span><em>&</em><span>Sebastian</span></h1>
+        <p class="hero-subtitle">invite you to celebrate their wedding</p>
+        <div class="hero-date">12 <i>·</i> 06 <i>·</i> 2027</div>
+        <p class="hero-location">THE GRAND ESTATE <span>·</span> NAGPUR, INDIA</p>
+        <a class="scroll-cue" href="#welcome">SCROLL TO DISCOVER <span>↓</span></a>
+      </div>
+      <div class="vertical-note">A DAY TO REMEMBER · 2027</div>
+    </section>
+
+    <section class="welcome section-pad" id="welcome">
+      <p class="eyebrow reveal">DEAR FAMILY AND FRIENDS</p>
+      <h2 class="display reveal">Some moments are<br><i>better together.</i></h2>
+      <p class="body-copy reveal">With full hearts and joyful anticipation, we would love for you to join us as we begin our forever. Your presence will make our day even more beautiful.</p>
+      <div class="signature reveal">Aurelia <span>&</span> Sebastian</div>
+      <div class="ornament">✳ &nbsp; ✳ &nbsp; ✳</div>
+    </section>
+
+    <section class="date-section section-pad">
+      <div class="date-photo reveal"></div>
+      <div class="date-copy reveal">
+        <p class="eyebrow">SAVE THE DATE</p>
+        <h2 class="display">Turn the pages<br>to <i>our day.</i></h2>
+        <div class="date-large">12 <span>JUNE</span> 2027</div>
+        <p class="body-copy">Saturday · Welcome drinks at half past five</p>
+        <a class="outline-link" id="calendarLink" href="#">ADD TO MY CALENDAR <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="evening section-pad">
+      <p class="eyebrow reveal">THE EVENING</p>
+      <h2 class="display reveal">How the night<br><i>will unfold.</i></h2>
+      <div class="timeline">
+        <article class="timeline-item reveal"><span class="timeline-time">16:00</span><div><h3>Welcome</h3><p>Arrive, settle in and meet your hosts.</p></div><span class="timeline-index">01</span></article>
+        <article class="timeline-item reveal"><span class="timeline-time">17:30</span><div><h3>Welcome drinks</h3><p>A little sparkle before the celebrations begin.</p></div><span class="timeline-index">02</span></article>
+        <article class="timeline-item reveal"><span class="timeline-time">19:30</span><div><h3>Dinner</h3><p>An evening of good food, stories and togetherness.</p></div><span class="timeline-index">03</span></article>
+        <article class="timeline-item reveal"><span class="timeline-time">21:00</span><div><h3>Dance the night away</h3><p>One dance, a thousand memories.</p></div><span class="timeline-index">04</span></article>
+      </div>
+    </section>
+
+    <section class="venue section-pad">
+      <div class="venue-image reveal"></div>
+      <div class="venue-copy reveal">
+        <p class="eyebrow">THE SETTING</p>
+        <h2 class="display">A place to<br><i>celebrate.</i></h2>
+        <h3>The Grand Estate</h3>
+        <p class="body-copy">Example Road, Civil Lines<br>Nagpur, Maharashtra, India</p>
+        <a class="outline-link" href="https://maps.google.com/?q=Nagpur" target="_blank" rel="noopener">GET DIRECTIONS <span>↗</span></a>
+        <p class="venue-small">Complimentary valet parking will be available at the main entrance.</p>
+      </div>
+    </section>
+
+    <section class="dress section-pad">
+      <p class="eyebrow reveal">DRESS CODE</p>
+      <h2 class="display reveal">An evening<br><i>in full colour.</i></h2>
+      <p class="body-copy reveal">Evening attire · Let the night be dressed in rich, timeless tones.</p>
+      <div class="swatches reveal">
+        <div><span style="--swatch:#170e18"></span><small>MIDNIGHT</small></div>
+        <div><span style="--swatch:#54202d"></span><small>BORDEAUX</small></div>
+        <div><span style="--swatch:#8d1834"></span><small>RUBY</small></div>
+        <div><span style="--swatch:#d7b78c"></span><small>CHAMPAGNE</small></div>
+        <div><span style="--swatch:#d8a6a4"></span><small>BLUSH</small></div>
+      </div>
+      <div class="dress-photos">
+        <div class="dress-photo dress-one reveal"></div><div class="dress-photo dress-two reveal"></div><div class="dress-photo dress-three reveal"></div>
+      </div>
+    </section>
+
+    <section class="wishes section-pad">
+      <p class="eyebrow reveal">A FEW LITTLE WISHES</p>
+      <h2 class="display reveal">The little things<br><i>to know.</i></h2>
+      <div class="wish-grid">
+        <article class="wish reveal"><span>01</span><h3>Gifts</h3><p>Your presence is the greatest gift. Truly.</p></article>
+        <article class="wish reveal"><span>02</span><h3>Children</h3><p>Please contact your host if you would like to bring little ones.</p></article>
+        <article class="wish reveal"><span>03</span><h3>Photographs</h3><p>Capture the memories, share the joy and be present in the moment.</p></article>
+        <article class="wish reveal"><span>04</span><h3>Questions</h3><p>For anything you need, please reach out to your hosts.</p></article>
+      </div>
+    </section>
+
+    <section class="rsvp section-pad" id="rsvp">
+      <div class="rsvp-heading reveal"><p class="eyebrow">KINDLY REPLY BY 20 MAY 2027</p><h2 class="display">Will you<br><i>join us?</i></h2><p class="body-copy">We would be so happy to celebrate with you.</p></div>
+      <form id="rsvpForm" class="rsvp-form reveal">
+        <label>Your full name<input name="name" type="text" placeholder="Your name" required></label>
+        <label>Your email<input name="email" type="email" placeholder="you@example.com" required></label>
+        <fieldset><legend>Will you be joining us?</legend>
+          <label class="choice"><input type="radio" name="attendance" value="Joyfully accepts" required><span>Joyfully accepts</span></label>
+          <label class="choice"><input type="radio" name="attendance" value="Regretfully declines"><span>Regretfully declines</span></label>
+          <label class="choice"><input type="radio" name="attendance" value="Will reply later"><span>Will reply later</span></label>
+        </fieldset>
+        <label>Number of guests<select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+        <label>Dietary requirements<textarea name="diet" rows="2" placeholder="Any allergies or dietary preferences?"></textarea></label>
+        <label>A song that will get you dancing<input name="song" type="text" placeholder="Artist and song"></label>
+        <label>A little note for us<textarea name="note" rows="3" placeholder="Write something lovely..."></textarea></label>
+        <button class="submit-button" type="submit">SEND MY REPLY <span>↗</span></button>
+        <p class="form-note" id="formMessage">This demo form shows a confirmation locally. Connect a form service to receive real replies.</p>
+      </form>
+    </section>
+
+    <section class="countdown-section section-pad">
+      <p class="eyebrow reveal">UNTIL WE MEET</p>
+      <h2 class="display reveal">The countdown<br><i>is on.</i></h2>
+      <div class="countdown reveal">
+        <div><strong id="days">000</strong><span>DAYS</span></div><b>:</b>
+        <div><strong id="hours">00</strong><span>HOURS</span></div><b>:</b>
+        <div><strong id="minutes">00</strong><span>MINUTES</span></div><b>:</b>
+        <div><strong id="seconds">00</strong><span>SECONDS</span></div>
+      </div>
+      <p class="closing-script">With love,</p><div class="signature">Aurelia <span>&</span> Sebastian</div>
+      <p class="footer-date">12 JUNE 2027 · NAGPUR</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
