@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vishal Madhumatke & Ruchika · 28 December 2026</title>
+<meta name="theme-color" content="#1a0207">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#12010510; --bg:#150106; --wine:#5a0b1a; --ruby:#8f1230; --rose:#b3274a;
+  --cream:#f7efe8; --paper:#fbf6f1; --gold1:#f1d9a0; --gold2:#c9a25e; --ink:#5b1020; --muted:#cdb3ae;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:"Cormorant Garamond",Georgia,serif;font-size:20px;line-height:1.55;text-align:center;overflow-x:hidden}
+body.locked{overflow:hidden;height:100vh}
+.script{font-family:"Pinyon Script",cursive;font-weight:400}
+section{position:relative;padding:90px 24px}
+.wrap{max-width:560px;margin:0 auto;position:relative;z-index:2}
+h2{font-family:"Pinyon Script",cursive;font-weight:400;font-size:2.7rem;line-height:1.1}
+.sub{font-style:italic;color:var(--muted);margin-top:6px}
+
+/* satin backdrop */
+.satin{background:
+  radial-gradient(60% 40% at 20% 15%,rgba(179,39,74,.55),transparent 70%),
+  radial-gradient(70% 45% at 85% 45%,rgba(143,18,48,.6),transparent 70%),
+  radial-gradient(60% 40% at 15% 85%,rgba(120,12,38,.6),transparent 70%),
+  repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 3px,transparent 3px 22px),
+  linear-gradient(160deg,#3b0613,#1b0208 55%,#44071a)}
+
+/* cream embossed + lace */
+.cream{background:radial-gradient(90% 60% at 50% 50%,#fffaf5,var(--cream) 80%);color:var(--ink);padding-top:110px;padding-bottom:110px}
+.cream h2{color:var(--ruby)} .cream .sub{color:#7b4a52}
+.lace{position:absolute;left:0;right:0;height:46px;z-index:3;
+  background:
+   radial-gradient(circle at 50% 100%,transparent 0 11px,#d9cfc6 11px 13px,transparent 13px) 0 0/26px 26px repeat-x,
+   radial-gradient(circle at 50% 50%,#efe6dd 0 4px,transparent 4px) 13px 6px/26px 26px repeat-x,
+   linear-gradient(#f3ece4,#f3ece4) 0 0/100% 18px no-repeat;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))}
+.lace.top{top:0} .lace.bot{bottom:0;transform:scaleY(-1)}
+.oval{position:absolute;inset:60px 14px;border:2px solid #e8ddd2;border-radius:50% / 22%;box-shadow:inset 0 0 0 6px #fbf5ee,inset 0 0 0 8px #eadfd4;pointer-events:none}
+
+/* ---------- cover ---------- */
+#cover{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;cursor:pointer;
+  background:repeating-linear-gradient(90deg,#3a040f 0 14px,#6d0b1f 14px 30px,#4a0713 30px 44px,#7d1026 44px 58px),#4a0713;
+  transition:opacity 1.2s,visibility 1.2s}
+#cover::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 55% at 50% 45%,rgba(0,0,0,.05),rgba(0,0,0,.75))}
+#cover.gone{opacity:0;visibility:hidden}
+#glitter{position:absolute;inset:0;width:100%;height:100%}
+.cover-in{position:relative;z-index:2;pointer-events:none}
+.cover-in .mono{font-size:4.8rem;color:var(--gold1);text-shadow:0 0 22px rgba(0,0,0,.7)}
+.cover-in p{color:var(--cream);font-style:italic;text-shadow:0 1px 8px #000}
+.cover-in .hint{margin-top:34px;animation:pulse 2.4s infinite}
+@keyframes pulse{50%{opacity:.35}}
+
+/* ---------- hero ---------- */
+#hero{min-height:100vh;padding:60px 20px 40px;display:flex;flex-direction:column;align-items:center;overflow:hidden;
+  background:radial-gradient(60% 50% at 50% 55%,#3a0a14,#0b0003 80%)}
+.curtain{position:absolute;top:0;bottom:0;width:30%;z-index:1;
+  background:repeating-linear-gradient(90deg,#3a040f 0 12px,#8b1328 12px 26px,#4d0715 26px 40px,#a01a32 40px 52px)}
+.curtain.l{left:0;clip-path:polygon(0 0,100% 0,60% 100%,0 100%);box-shadow:10px 0 40px #000}
+.curtain.r{right:0;clip-path:polygon(0 0,100% 0,100% 100%,40% 100%)}
+.beam{position:absolute;top:0;left:18%;width:70%;height:75%;z-index:1;opacity:.5;
+  background:linear-gradient(100deg,rgba(255,200,200,.35),transparent 55%);clip-path:polygon(8% 0,28% 0,70% 100%,0 100%)}
+.stage{position:absolute;bottom:6%;left:50%;transform:translateX(-50%);width:62%;aspect-ratio:3/1;z-index:1;border-radius:50%;
+  background:radial-gradient(ellipse,#2b0a10 40%,#120206 70%);box-shadow:0 0 40px 6px rgba(255,150,170,.55),inset 0 0 0 4px rgba(255,170,185,.7)}
+.hero-photo{position:absolute;inset:0;z-index:1;background:url(hero.jpg) center/cover no-repeat;opacity:1}
+.hero-in{position:relative;z-index:3;margin-top:4vh}
+.hero-in .together{font-style:italic;color:var(--cream);font-size:1rem}
+.hero-in h1{font-family:"Pinyon Script",cursive;font-weight:400;font-size:clamp(3rem,15vw,4.6rem);line-height:1.02;margin:10px 0;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.hero-in h1 small{display:block;font-size:.55em;color:var(--gold1)}
+.hero-in .inv{font-style:italic;font-size:1rem;color:#f0d9d6;margin-top:22px}
+.hero-in .d{letter-spacing:.35em;color:var(--gold1);margin:10px 0 2px;padding-left:.35em;font-size:1.25rem}
+.hero-in .pl{font-style:italic;font-size:1rem;color:#f0d9d6}
+
+/* ---------- envelope ---------- */
+#dear{padding:110px 20px 150px}
+.env{position:relative;width:min(330px,86vw);margin:0 auto;padding-top:20px}
+.letter{position:relative;z-index:2;background:linear-gradient(#fffaf6,#f1e4dc);color:var(--ink);padding:34px 22px 62px;
+  clip-path:polygon(0 0,100% 0,100% 100%,60% 100%,50% calc(100% - 28px),40% 100%,0 100%);box-shadow:0 14px 30px rgba(0,0,0,.45)}
+.letter h2{color:var(--ruby);font-size:2.4rem}
+.letter p{margin:12px 0;font-size:1.05rem}
+.letter .sig{font-family:"Pinyon Script",cursive;color:var(--ruby);font-size:1.8rem;line-height:1.1}
+.pearl{position:absolute;z-index:4;top:6px;left:-6px;width:34px;height:34px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff,#e9dfd6 45%,#b7a99c);box-shadow:0 4px 6px rgba(0,0,0,.4)}
+.flap{position:relative;z-index:3;margin-top:-88px;height:180px;
+  background:
+   repeating-radial-gradient(circle at 30% 60%,rgba(255,170,190,.14) 0 3px,transparent 3px 11px),
+   linear-gradient(180deg,#5a0f22,#3a0816);
+  clip-path:polygon(0 18%,50% 62%,100% 18%,100% 100%,0 100%);border-bottom:2px solid rgba(240,200,200,.5)}
+.flap::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,rgba(255,200,210,.15),transparent 60%)}
+
+/* ---------- calendar ---------- */
+#save{background:#070103;padding-bottom:110px}
+.cal{width:min(330px,86vw);margin:34px auto 0;background:#1a0a0d;border:1px solid #3c2a2c;padding:0 8px 8px;border-radius:4px;position:relative;box-shadow:0 20px 40px rgba(0,0,0,.6)}
+.cal .tab{color:var(--gold2);font-size:.8rem;letter-spacing:.3em;padding:6px 0}
+.page{background:linear-gradient(#fbf4ee,#efe3d9);color:#2c1118;padding:22px 16px 28px;min-height:300px;transform-origin:top;perspective:600px}
+.page.flip{animation:flip .55s ease-in}
+@keyframes flip{0%{transform:rotateX(0)}50%{transform:rotateX(-80deg);opacity:.4}100%{transform:rotateX(0)}}
+.page .mn{font-size:2.3rem;letter-spacing:.04em}
+.page .yr{font-size:.7rem;letter-spacing:.3em;color:var(--ruby);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px 0;margin-top:18px;font-size:.95rem}
+.grid .h{font-size:.65rem;color:#8a7a7a}
+.grid .we{color:var(--rose)}
+.grid .on{position:relative;color:var(--ruby);font-weight:600}
+.grid .on::after{content:"";position:absolute;left:50%;top:50%;width:28px;height:28px;margin:-14px 0 0 -14px;border:1.5px solid var(--ruby);border-radius:50%}
+.strand{position:absolute;left:-30px;top:70px;width:30px;height:120px;border-radius:50%;
+  background:radial-gradient(circle,#fff 0 3px,#cfc3b8 4px,transparent 5px) 0 0/10px 10px;transform:rotate(-8deg);opacity:.9}
+.when{margin-top:34px;font-size:1.5rem;color:var(--gold1)}
+.btn{display:inline-block;margin-top:22px;padding:13px 34px;border-radius:999px;border:0;color:#3a2410;text-decoration:none;font:inherit;font-weight:600;font-size:1.05rem;cursor:pointer;
+  background:linear-gradient(110deg,#c9a25e,#f6e3b2 50%,#c9a25e)}
+.btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.btn.rb{background:linear-gradient(110deg,var(--ruby),var(--rose));color:#fff}
+
+/* ---------- evening ---------- */
+.tl{list-style:none;margin:30px auto 0;max-width:420px;text-align:left}
+.tl li{display:grid;grid-template-columns:62px 1fr;gap:0;margin-bottom:34px}
+.tl time{font-size:1.45rem;color:var(--ruby);padding-top:2px}
+.tl div{border-left:2px solid var(--ruby);padding-left:18px}
+.tl b{display:block;font-family:"Pinyon Script",cursive;font-weight:400;font-size:2.1rem;color:var(--ruby);line-height:1.1}
+.tl span{color:#6b3b44;font-size:1.02rem}
+
+/* ---------- where ---------- */
+.arch{width:min(300px,78vw);aspect-ratio:3/4;margin:30px auto 0;border:1px solid var(--gold2);border-radius:200px 200px 0 0;padding:10px}
+.arch div{width:100%;height:100%;border-radius:190px 190px 0 0;background:url(venue.jpg) center/cover,linear-gradient(170deg,#6b1a2b,#26050c 70%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:30px;color:rgba(255,255,255,.35);font-style:italic}
+.venue{font-size:2rem;color:var(--gold1);margin-top:26px}
+.map{width:100%;height:230px;border:0;border-radius:6px;margin-top:30px;filter:sepia(.35) hue-rotate(-20deg) saturate(.8)}
+
+/* ---------- dress + wishes ---------- */
+.dress h2{color:#fff}
+.dress p{margin-top:10px}
+.cards{display:grid;gap:18px;margin-top:34px}
+.card{background:linear-gradient(#fffaf6,#f3e8e0);color:var(--ink);padding:18px 16px;border-radius:6px;box-shadow:0 6px 16px rgba(80,30,40,.25),inset 0 0 0 1px #efe3d8}
+.card h3{font-family:"Pinyon Script",cursive;font-weight:400;font-size:2rem;color:var(--ruby);line-height:1.1}
+.card p{font-size:1.02rem;color:#5d3a42}
+
+/* ---------- rsvp ---------- */
+form{text-align:left;display:grid;gap:16px;margin-top:26px}
+label{font-size:.95rem;color:var(--gold1);display:grid;gap:6px}
+input,select,textarea{font:inherit;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(241,217,160,.4);border-radius:10px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--rose);outline-offset:1px}
+select option{color:#000}
+.checks{display:flex;gap:18px;flex-wrap:wrap}
+.checks label{display:flex;align-items:center;gap:8px;color:var(--cream)}
+.checks input{width:auto}
+#thanks{display:none;margin-top:24px;padding:26px;border:1px solid var(--gold2);border-radius:14px}
+
+/* ---------- countdown ---------- */
+#until{padding-bottom:140px;background:
+  repeating-linear-gradient(90deg,rgba(60,4,15,.9) 0 14px,rgba(120,14,36,.55) 14px 30px,rgba(70,6,20,.9) 30px 44px),#2a030a}
+#until::before{content:"";position:absolute;inset:0;background:linear-gradient(#150106,transparent 25%,transparent 60%,#150106)}
+.count{display:flex;justify-content:center;gap:12px;align-items:flex-start;margin-top:28px}
+.count b{display:block;font-size:3rem;font-weight:500;color:var(--gold1);line-height:1}
+.count small{font-style:italic;color:var(--muted);font-size:.95rem}
+.count i{font-size:2.2rem;color:var(--gold1);font-style:normal}
+.count div{min-width:76px}
+.love{margin-top:46px;font-style:italic}
+.love .script{display:block;font-size:2.8rem;color:var(--gold1);line-height:1.1}
+
+/* ---------- music btn ---------- */
+#music{position:fixed;right:16px;bottom:16px;z-index:120;width:48px;height:48px;border-radius:50%;border:1px solid var(--gold2);background:rgba(18,1,5,.85);color:var(--gold1);font-size:1.25rem;cursor:pointer;display:none;align-items:center;justify-content:center}
+#music.on{display:flex} #music.playing{animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body class="locked">
+
+<!-- MUSIC: put feeling-good.mp3 (Feeling Good – Michael Bublé) in the same folder as this file.
+     OPTIONAL: hero.jpg = couple photo for the first screen, venue.jpg = venue photo for the arch. -->
+<audio id="song" src="feeling-good.mp3" loop preload="auto"></audio>
+
+<div id="cover" role="button" tabindex="0" aria-label="Open invitation">
+  <canvas id="glitter"></canvas>
+  <div class="cover-in">
+    <p>An invitation is hiding under the glitter</p>
+    <div class="mono script">V &amp; R</div>
+    <p class="hint">Blow on the glitter, or simply tap</p>
+  </div>
+</div>
+<button id="music" aria-label="Pause or play music">♪</button>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="curtain l"></div><div class="curtain r"></div>
+  <div class="beam"></div><div class="stage"></div><div class="hero-photo"></div>
+  <div class="hero-in">
+    <p class="together">Together with their families</p>
+    <h1>Vishal Madhumatke<small>&amp;</small>Ruchika</h1>
+    <p class="inv">invite you to celebrate their wedding</p>
+    <p class="d">28 12 2026</p>
+    <p class="pl">Nagpur</p>
+  </div>
+</section>
+
+<!-- DEAR FAMILY -->
+<section id="dear" class="satin">
+  <div class="env">
+    <div class="pearl"></div>
+    <div class="letter">
+      <h2>Dear family and friends</h2>
+      <p>We would love to celebrate<br>this day with you.</p>
+      <div class="sig">Vishal &amp; Ruchika</div>
+    </div>
+    <div class="flap"></div>
+  </div>
+</section>
+
+<!-- SAVE THE DATE -->
+<section id="save">
+  <div class="wrap">
+    <h2>Save the date</h2>
+    <p class="sub">Turn the pages to our day</p>
+    <div class="cal">
+      <div class="tab">V &amp; R</div>
+      <div class="page" id="page"></div>
+      <div class="strand"></div>
+    </div>
+    <p class="when">Monday, 28 December 2026</p>
+    <p class="sub">Nagpur</p>
+    <button class="btn" id="addcal">Add to my calendar</button>
+  </div>
+</section>
+
+<!-- THE EVENING -->
+<section class="cream">
+  <div class="lace top"></div><div class="oval"></div><div class="lace bot"></div>
+  <div class="wrap">
+    <h2>The evening</h2>
+    <p class="sub">How the day will unfold</p>
+    <ol class="tl">
+      <li><time>Morning</time><div><b>Welcome</b><span>Meet your hosts and fellow guests</span></div></li>
+      <li><time>Evening</time><div><b>Dinner</b><span>An evening together</span></div></li>
+    </ol>
+    <p class="sub" style="font-size:.9rem">Exact timings will be shared by your host.</p>
+  </div>
+</section>
+
+<!-- WHERE -->
+<section class="satin">
+  <div class="wrap">
+    <h2 style="color:#fff">Where</h2>
+    <div class="arch"><div>your venue photo</div></div>
+    <p class="venue">Nagpur</p>
+    <p class="sub">Maharashtra, India</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Nagpur">Get directions</a>
+    <iframe class="map" loading="lazy" title="Map of Nagpur" src="https://maps.google.com/maps?q=Nagpur&output=embed"></iframe>
+  </div>
+</section>
+
+<!-- DRESS CODE -->
+<section class="satin dress" style="padding-top:60px;padding-bottom:110px">
+  <div class="wrap"><h2>Dress code</h2><p>Festive &amp; traditional attire</p></div>
+</section>
+
+<!-- WISHES -->
+<section class="cream">
+  <div class="lace top"></div><div class="lace bot"></div>
+  <div class="wrap">
+    <h2>A few wishes</h2>
+    <div class="cards">
+      <div class="card"><h3>Gifts</h3><p>Your presence is the best gift.</p></div>
+      <div class="card"><h3>Children</h3><p>Please contact your host about bringing children.</p></div>
+      <div class="card"><h3>Photos</h3><p>Photographs are welcome.</p></div>
+      <div class="card"><h3>Contact</h3><p>Your host</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp" class="satin">
+  <div class="wrap">
+    <h2 style="color:#fff">Will you join us?</h2>
+    <form id="rsvpForm">
+      <label>Your full name<input name="name" required autocomplete="name"></label>
+      <label>Will you come?
+        <select><option>Yes, with pleasure</option><option>Sadly, I can’t come</option><option>I’ll reply a little later</option></select>
+      </label>
+      <label>Coming with me<input placeholder="Leave empty if you are coming alone"></label>
+      <label>Allergies or dietary needs<input></label>
+      <label>A song that will get you dancing<input></label>
+      <label>A note for the couple<textarea rows="3"></textarea></label>
+      <div>
+        <div style="color:var(--gold1);font-size:.95rem;margin-bottom:6px">Which moments will you attend?</div>
+        <div class="checks"><label><input type="checkbox" checked> Welcome</label><label><input type="checkbox" checked> Dinner</label></div>
+      </div>
+      <button class="btn rb" type="submit" style="justify-self:center">Send my reply</button>
+    </form>
+    <div id="thanks">
+      <p>Your reply has been saved.</p>
+      <p class="sub">Place: Nagpur · 28 December 2026</p>
+      <button class="btn" id="change">Change my reply</button>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section id="until">
+  <div class="wrap">
+    <h2 style="color:#fff">Until we meet</h2>
+    <div class="count">
+      <div><b id="d">0</b><small>days</small></div><i>:</i>
+      <div><b id="h">0</b><small>hours</small></div><i>:</i>
+      <div><b id="m">0</b><small>minutes</small></div>
+    </div>
+    <p class="love">With love,<span class="script">Vishal<br>&amp;<br>Ruchika</span></p>
+  </div>
+</section>
+
+<script>
+(function(){
+  const cover=document.getElementById('cover'),song=document.getElementById('song'),btn=document.getElementById('music');
+
+  /* music */
+  function playMusic(){song.volume=.8;const p=song.play();if(p&&p.then)p.then(()=>btn.classList.add('on','playing')).catch(()=>{});}
+  song.play().then(()=>btn.classList.add('on','playing')).catch(()=>{});
+  const evs=['pointerdown','touchstart','click','keydown'];
+  function first(){ if(song.paused&&!song.dataset.up)playMusic(); else btn.classList.add('on'); evs.forEach(e=>window.removeEventListener(e,first,true)); }
+  evs.forEach(e=>window.addEventListener(e,first,true));
+  btn.addEventListener('click',e=>{e.stopPropagation();
+    if(song.paused){song.dataset.up='';song.play();btn.classList.add('playing')}
+    else{song.dataset.up='1';song.pause();btn.classList.remove('playing')}});
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!song.dataset.up&&song.paused&&cover.classList.contains('gone'))song.play().catch(()=>{})});
+
+  /* cover */
+  function openCover(){if(cover.classList.contains('gone'))return;cover.classList.add('gone');document.body.classList.remove('locked');playMusic();}
+  cover.addEventListener('click',openCover);
+  cover.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openCover()});
+
+  /* glitter */
+  const cv=document.getElementById('glitter'),ctx=cv.getContext('2d');let W,H,dots=[];
+  function size(){W=cv.width=innerWidth;H=cv.height=innerHeight;
+    dots=Array.from({length:Math.min(320,Math.floor(W*H/3000))},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2+.4,t:Math.random()*6.28,s:.02+Math.random()*.06,c:['#f1d9a0','#fff','#ff5a78','#ffd9a0'][Math.floor(Math.random()*4)]}))}
+  size();addEventListener('resize',size);
+  (function draw(){if(cover.classList.contains('gone'))return;ctx.clearRect(0,0,W,H);
+    dots.forEach(d=>{d.t+=d.s;ctx.globalAlpha=.3+.7*Math.abs(Math.sin(d.t));ctx.fillStyle=d.c;ctx.beginPath();ctx.arc(d.x,d.y,d.r,0,6.283);ctx.fill()});
+    requestAnimationFrame(draw)})();
+
+  /* flipping calendar: Oct → Nov → Dec 2026, 28 circled */
+  const page=document.getElementById('page');
+  const MN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function render(y,m,mark){
+    const first=(new Date(y,m,1).getDay()+6)%7, n=new Date(y,m+1,0).getDate();
+    let h=`<div class="mn script">${MN[m]}</div><div class="yr">${y}</div><div class="grid">`;
+    'MTWTFSS'.split('').forEach(d=>h+=`<span class="h">${d}</span>`);
+    for(let i=0;i<first;i++)h+='<span></span>';
+    for(let d=1;d<=n;d++){const col=(first+d-1)%7;h+=`<span class="${col>4?'we ':''}${mark&&d===28?'on':''}">${d}</span>`}
+    page.innerHTML=h+'</div>';
+    page.classList.remove('flip');void page.offsetWidth;page.classList.add('flip');
+  }
+  render(2026,9,false);
+  let ran=false;
+  new IntersectionObserver(es=>{if(es[0].isIntersecting&&!ran){ran=true;
+    setTimeout(()=>render(2026,10,false),700);setTimeout(()=>render(2026,11,true),1500);}},{threshold:.5}).observe(page);
+
+  /* countdown */
+  const target=new Date('2026-12-28T00:00:00+05:30').getTime();
+  function tick(){let x=Math.max(0,target-Date.now());
+    const d=Math.floor(x/864e5);x%=864e5;const h=Math.floor(x/36e5);x%=36e5;
+    document.getElementById('d').textContent=d;document.getElementById('h').textContent=h;document.getElementById('m').textContent=Math.floor(x/6e4)}
+  tick();setInterval(tick,30000);
+
+  /* rsvp */
+  const f=document.getElementById('rsvpForm'),t=document.getElementById('thanks');
+  f.addEventListener('submit',e=>{e.preventDefault();f.style.display='none';t.style.display='block'});
+  document.getElementById('change').addEventListener('click',()=>{t.style.display='none';f.style.display='grid'});
+
+  /* add to calendar */
+  document.getElementById('addcal').addEventListener('click',()=>{
+    const ics=['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT','DTSTART;VALUE=DATE:20261228','DTEND;VALUE=DATE:20261229','SUMMARY:Vishal Madhumatke & Ruchika – Wedding','LOCATION:Nagpur','END:VEVENT','END:VCALENDAR'].join('\r\n');
+    const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));a.download='wedding.ics';a.click()});
+})();
+</script>
+</body>
+</html>
